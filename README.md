@@ -121,3 +121,4 @@ for the checkpoint steps.
 
 Sprint 2's `v0.2-text-translation` release checkpoint is described in
 `IMPLEMENTATION.md`.
+Thank YOU
