@@ -1,9 +1,24 @@
-# AI-Mediated English ↔ Hindi Speech Translation
+<div align="center">
 
-A browser-based, local-first speech translation application that accepts
-microphone audio or typed text and translates in two directions: English
-→ Hindi and Hindi → English. The browser displays the source transcript
-and translated text and can play generated target-language audio.
+# Speech-to-Speech Translation and Transcription
+
+### Local-first speech translation and transcription for English and Hindi
+
+![Python 3.11](https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/API-FastAPI-009688?logo=fastapi&logoColor=white)
+![Language pair](https://img.shields.io/badge/Language-English%20%E2%86%94%20Hindi-4C8EDA)
+![Local-first](https://img.shields.io/badge/Processing-Local--first-2E8B57)
+
+[Overview](#scope) · [How it works](docs/architecture.md) · [Setup](#getting-started) · [API docs](docs/api.md)
+
+</div>
+
+---
+
+A browser-based application that accepts microphone audio or typed text and
+translates in two directions: English → Hindi and Hindi → English. The browser
+displays the source transcript and translated text and can play generated
+target-language audio.
 
 ## Scope
 

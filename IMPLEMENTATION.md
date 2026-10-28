@@ -282,7 +282,7 @@ Jira **before coding**.
 backend/frontend skeleton, basic checks, and a team workflow everyone
 can run locally.
 
-### S1-01 --- Create repository and project baseline — **Completed**
+### S1-01 (AMTT-1) --- Create repository and project baseline — **Completed**
 
 **Owner:** Member D\
 **Description:** Create the GitHub repository, default branch, initial
@@ -293,7 +293,37 @@ virtual environments, caches, generated audio, model weights, and build
 artifacts. - README states project scope and English↔Hindi-only
 limitation. - All four members can clone the repository.
 
-### S1-02 --- Create Jira backlog and four sprints — **Completed**
+**Branch naming for AMTT-1:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-1-short-description
+fix/AMTT-1-short-description
+docs/AMTT-1-short-description
+test/AMTT-1-short-description
+```
+
+Example: `feature/AMTT-1-create-repository-and-project-baseline`
+
+**Start every task by pulling (AMTT-1):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-1-create-repository-and-project-baseline`).
+
+**Testing for AMTT-1:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-1:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-1-create-repository-and-project-baseline
+git add <specific-files>
+git commit -m "AMTT-1: Create repository and project baseline"
+git push -u origin feature/AMTT-1-create-repository-and-project-baseline
+```
+
+### S1-02 (AMTT-2) --- Create Jira backlog and four sprints — **Completed**
 
 **Owner:** Member D\
 **Description:** Create all 40 items from this section, grouped into
@@ -303,7 +333,37 @@ four sprints of 10. Assign initial owners and labels.\
 criteria. - Dependencies and labels are recorded. - Team confirms the
 sprint order before implementation.
 
-### S1-03 --- Finalize requirements and acceptance tests — **Completed**
+**Branch naming for AMTT-2:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-2-short-description
+fix/AMTT-2-short-description
+docs/AMTT-2-short-description
+test/AMTT-2-short-description
+```
+
+Example: `feature/AMTT-2-create-jira-backlog-and-four-sprints`
+
+**Start every task by pulling (AMTT-2):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-2-create-jira-backlog-and-four-sprints`).
+
+**Testing for AMTT-2:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-2:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-2-create-jira-backlog-and-four-sprints
+git add <specific-files>
+git commit -m "AMTT-2: Create Jira backlog and four sprints"
+git push -u origin feature/AMTT-2-create-jira-backlog-and-four-sprints
+```
+
+### S1-03 (AMTT-3) --- Finalize requirements and acceptance tests — **Completed**
 
 **Owner:** Member A\
 **Description:** Write the concise functional/non-functional
@@ -313,7 +373,37 @@ separately documented. - Typed-text fallback is included. - Out-of-scope
 features are explicitly listed. - Team and instructor-facing demo
 criteria are documented.
 
-### S1-04 --- Document architecture and provider boundaries — **Completed**
+**Branch naming for AMTT-3:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-3-short-description
+fix/AMTT-3-short-description
+docs/AMTT-3-short-description
+test/AMTT-3-short-description
+```
+
+Example: `feature/AMTT-3-finalize-requirements-and-acceptance-tests`
+
+**Start every task by pulling (AMTT-3):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-3-finalize-requirements-and-acceptance-tests`).
+
+**Testing for AMTT-3:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-3:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-3-finalize-requirements-and-acceptance-tests
+git add <specific-files>
+git commit -m "AMTT-3: Finalize requirements and acceptance tests"
+git push -u origin feature/AMTT-3-finalize-requirements-and-acceptance-tests
+```
+
+### S1-04 (AMTT-4) --- Document architecture and provider boundaries — **Completed**
 
 **Owner:** Member B\
 **Description:** Create `docs/architecture.md` describing browser, API,
@@ -323,7 +413,37 @@ Each model component has a replaceable provider boundary. -
 Request/response flow and error handling are documented. - No
 model-specific code is required by route handlers.
 
-### S1-05 --- Set up Python environment and dependencies — **Completed**
+**Branch naming for AMTT-4:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-4-short-description
+fix/AMTT-4-short-description
+docs/AMTT-4-short-description
+test/AMTT-4-short-description
+```
+
+Example: `feature/AMTT-4-document-architecture-and-provider-boundaries`
+
+**Start every task by pulling (AMTT-4):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-4-document-architecture-and-provider-boundaries`).
+
+**Testing for AMTT-4:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-4:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-4-document-architecture-and-provider-boundaries
+git add <specific-files>
+git commit -m "AMTT-4: Document architecture and provider boundaries"
+git push -u origin feature/AMTT-4-document-architecture-and-provider-boundaries
+```
+
+### S1-05 (AMTT-5) --- Set up Python environment and dependencies — **Completed**
 
 **Owner:** Member C\
 **Description:** Add a minimal Python 3.11 backend environment and pin
@@ -334,7 +454,37 @@ and HTTP client dependencies are listed. - Heavy ML dependencies are
 separated or documented so a clean install can run tests without
 downloading models. - No machine-specific absolute paths are committed.
 
-### S1-06 --- Add environment configuration — **Completed**
+**Branch naming for AMTT-5:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-5-short-description
+fix/AMTT-5-short-description
+docs/AMTT-5-short-description
+test/AMTT-5-short-description
+```
+
+Example: `feature/AMTT-5-set-up-python-environment-and-dependencies`
+
+**Start every task by pulling (AMTT-5):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-5-set-up-python-environment-and-dependencies`).
+
+**Testing for AMTT-5:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-5:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-5-set-up-python-environment-and-dependencies
+git add <specific-files>
+git commit -m "AMTT-5: Set up Python environment and dependencies"
+git push -u origin feature/AMTT-5-set-up-python-environment-and-dependencies
+```
+
+### S1-06 (AMTT-6) --- Add environment configuration — **Completed**
 
 **Owner:** Member B\
 **Description:** Add typed settings for host, port, log level, model
@@ -343,7 +493,37 @@ IDs/paths, device selection, and upload limits.\
 only. - `.env` is ignored by Git. - Application has sensible local
 defaults. - Invalid configuration produces a readable startup error.
 
-### S1-07 --- Implement FastAPI application entry point — **Completed**
+**Branch naming for AMTT-6:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-6-short-description
+fix/AMTT-6-short-description
+docs/AMTT-6-short-description
+test/AMTT-6-short-description
+```
+
+Example: `feature/AMTT-6-add-environment-configuration`
+
+**Start every task by pulling (AMTT-6):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-6-add-environment-configuration`).
+
+**Testing for AMTT-6:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-6:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-6-add-environment-configuration
+git add <specific-files>
+git commit -m "AMTT-6: Add environment configuration"
+git push -u origin feature/AMTT-6-add-environment-configuration
+```
+
+### S1-07 (AMTT-7) --- Implement FastAPI application entry point — **Completed**
 
 **Owner:** Member B\
 **Description:** Create `backend/app/main.py`, app initialization,
@@ -352,7 +532,37 @@ startup/shutdown hooks, and API router registration.\
 command. - `/docs` is available. - Startup does not download models
 unexpectedly. - Importing the app does not require a GPU.
 
-### S1-08 --- Implement health endpoint and basic API tests — **Completed**
+**Branch naming for AMTT-7:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-7-short-description
+fix/AMTT-7-short-description
+docs/AMTT-7-short-description
+test/AMTT-7-short-description
+```
+
+Example: `feature/AMTT-7-implement-fastapi-application-entry-point`
+
+**Start every task by pulling (AMTT-7):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-7-implement-fastapi-application-entry-point`).
+
+**Testing for AMTT-7:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-7:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-7-implement-fastapi-application-entry-point
+git add <specific-files>
+git commit -m "AMTT-7: Implement FastAPI application entry point"
+git push -u origin feature/AMTT-7-implement-fastapi-application-entry-point
+```
+
+### S1-08 (AMTT-8) --- Implement health endpoint and basic API tests — **Completed**
 
 **Owner:** Member D\
 **Description:** Add `GET /api/health` and tests for app startup and
@@ -361,7 +571,37 @@ health response.\
 status. - Automated test passes without model downloads. - Failure
 output is understandable. - Test command is documented.
 
-### S1-09 --- Build initial browser UI shell — **Completed**
+**Branch naming for AMTT-8:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-8-short-description
+fix/AMTT-8-short-description
+docs/AMTT-8-short-description
+test/AMTT-8-short-description
+```
+
+Example: `feature/AMTT-8-implement-health-endpoint-and-basic-api-tests`
+
+**Start every task by pulling (AMTT-8):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-8-implement-health-endpoint-and-basic-api-tests`).
+
+**Testing for AMTT-8:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-8:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-8-implement-health-endpoint-and-basic-api-tests
+git add <specific-files>
+git commit -m "AMTT-8: Implement health endpoint and basic API tests"
+git push -u origin feature/AMTT-8-implement-health-endpoint-and-basic-api-tests
+```
+
+### S1-09 (AMTT-9) --- Build initial browser UI shell — **Completed**
 
 **Owner:** Member A\
 **Description:** Create responsive page structure with project title,
@@ -372,7 +612,37 @@ language directions are selectable. - Controls have labels and
 disabled/loading states. - No model/API calls are required for this
 scaffold.
 
-### S1-10 --- Establish Git branching, PR and review rules — **Completed**
+**Branch naming for AMTT-9:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-9-short-description
+fix/AMTT-9-short-description
+docs/AMTT-9-short-description
+test/AMTT-9-short-description
+```
+
+Example: `feature/AMTT-9-build-initial-browser-ui-shell`
+
+**Start every task by pulling (AMTT-9):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-9-build-initial-browser-ui-shell`).
+
+**Testing for AMTT-9:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-9:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-9-build-initial-browser-ui-shell
+git add <specific-files>
+git commit -m "AMTT-9: Build initial browser UI shell"
+git push -u origin feature/AMTT-9-build-initial-browser-ui-shell
+```
+
+### S1-10 (AMTT-10) --- Establish Git branching, PR and review rules — **Completed**
 
 **Owner:** Member D\
 **Description:** Document shared Git workflow and ensure every member
@@ -386,6 +656,36 @@ The workflow documentation and PR template were merged to `main` in PR
 #8. Branch protection is configured separately by a repository
 administrator if repository permissions allow.
 
+**Branch naming for AMTT-10:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-10-short-description
+fix/AMTT-10-short-description
+docs/AMTT-10-short-description
+test/AMTT-10-short-description
+```
+
+Example: `feature/AMTT-10-establish-git-branching-pr-and-review-rules`
+
+**Start every task by pulling (AMTT-10):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-10-establish-git-branching-pr-and-review-rules`).
+
+**Testing for AMTT-10:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-10:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-10-establish-git-branching-pr-and-review-rules
+git add <specific-files>
+git commit -m "AMTT-10: Establish Git branching, PR and review rules"
+git push -u origin feature/AMTT-10-establish-git-branching-pr-and-review-rules
+```
+
 **Sprint 1 release checkpoint --- `v0.1-foundation`:** Merge all
 accepted changes, run tests, tag the commit, and confirm all four
 members can pull and run the skeleton.
@@ -398,7 +698,7 @@ members can pull and run the skeleton.
 receive translated text through the API, while model providers are
 independently testable.
 
-### S2-01 --- Define request and response schemas
+### S2-01 (AMTT-11) --- Define request and response schemas
 
 **Owner:** Member B\
 **Description:** Add Pydantic schemas for direction, source text,
@@ -409,7 +709,37 @@ accepted. - Empty/whitespace text is rejected with a useful 4xx
 response. - Response fields are documented. - Schema tests cover valid
 and invalid input.
 
-### S2-02 --- Define STT, translation and TTS provider interfaces
+**Branch naming for AMTT-11:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-11-short-description
+fix/AMTT-11-short-description
+docs/AMTT-11-short-description
+test/AMTT-11-short-description
+```
+
+Example: `feature/AMTT-11-define-request-and-response-schemas`
+
+**Start every task by pulling (AMTT-11):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-11-define-request-and-response-schemas`).
+
+**Testing for AMTT-11:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-11:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-11-define-request-and-response-schemas
+git add <specific-files>
+git commit -m "AMTT-11: Define request and response schemas"
+git push -u origin feature/AMTT-11-define-request-and-response-schemas
+```
+
+### S2-02 (AMTT-12) --- Define STT, translation and TTS provider interfaces
 
 **Owner:** Member C\
 **Description:** Define clear provider interfaces in
@@ -420,7 +750,37 @@ text and direction and returns translated text. - TTS accepts text and
 target language and returns audio bytes or a managed audio artifact. -
 Tests can inject fake providers without loading ML packages.
 
-### S2-03 --- Implement fake providers for development
+**Branch naming for AMTT-12:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-12-short-description
+fix/AMTT-12-short-description
+docs/AMTT-12-short-description
+test/AMTT-12-short-description
+```
+
+Example: `feature/AMTT-12-define-stt-translation-and-tts-provider-interfaces`
+
+**Start every task by pulling (AMTT-12):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-12-define-stt-translation-and-tts-provider-interfaces`).
+
+**Testing for AMTT-12:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-12:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-12-define-stt-translation-and-tts-provider-interfaces
+git add <specific-files>
+git commit -m "AMTT-12: Define STT, translation and TTS provider interfaces"
+git push -u origin feature/AMTT-12-define-stt-translation-and-tts-provider-interfaces
+```
+
+### S2-03 (AMTT-13) --- Implement fake providers for development
 
 **Owner:** Member C\
 **Description:** Implement deterministic fake STT, translation, and TTS
@@ -430,7 +790,37 @@ development/test-only. - Tests do not claim fake output is a real
 translation. - App can be run in mock mode from configuration. - No
 network or model download is required in mock mode.
 
-### S2-04 --- Verify and document Windows-compatible STT model
+**Branch naming for AMTT-13:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-13-short-description
+fix/AMTT-13-short-description
+docs/AMTT-13-short-description
+test/AMTT-13-short-description
+```
+
+Example: `feature/AMTT-13-implement-fake-providers-for-development`
+
+**Start every task by pulling (AMTT-13):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-13-implement-fake-providers-for-development`).
+
+**Testing for AMTT-13:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-13:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-13-implement-fake-providers-for-development
+git add <specific-files>
+git commit -m "AMTT-13: Implement fake providers for development"
+git push -u origin feature/AMTT-13-implement-fake-providers-for-development
+```
+
+### S2-04 (AMTT-14) --- Verify and document Windows-compatible STT model
 
 **Owner:** Member C\
 **Description:** Evaluate `faster-whisper` model options for
@@ -440,7 +830,37 @@ small model is selected for the first local smoke test. - CPU/GPU mode
 and VRAM/RAM observations are recorded. - Model loading is optional and
 isolated behind the STT provider.
 
-### S2-05 --- Implement faster-whisper STT adapter
+**Branch naming for AMTT-14:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-14-short-description
+fix/AMTT-14-short-description
+docs/AMTT-14-short-description
+test/AMTT-14-short-description
+```
+
+Example: `feature/AMTT-14-verify-and-document-windows-compatible-stt-model`
+
+**Start every task by pulling (AMTT-14):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-14-verify-and-document-windows-compatible-stt-model`).
+
+**Testing for AMTT-14:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-14:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-14-verify-and-document-windows-compatible-stt-model
+git add <specific-files>
+git commit -m "AMTT-14: Verify and document Windows-compatible STT model"
+git push -u origin feature/AMTT-14-verify-and-document-windows-compatible-stt-model
+```
+
+### S2-05 (AMTT-15) --- Implement faster-whisper STT adapter
 
 **Owner:** Member C\
 **Description:** Implement audio-to-transcript conversion with clear
@@ -449,7 +869,37 @@ language handling and errors.\
 Supports English and Hindi input. - Handles invalid/empty audio. - Unit
 tests use a mock; an optional local smoke test verifies real inference.
 
-### S2-06 --- Verify and document English↔Hindi translation model
+**Branch naming for AMTT-15:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-15-short-description
+fix/AMTT-15-short-description
+docs/AMTT-15-short-description
+test/AMTT-15-short-description
+```
+
+Example: `feature/AMTT-15-implement-faster-whisper-stt-adapter`
+
+**Start every task by pulling (AMTT-15):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-15-implement-faster-whisper-stt-adapter`).
+
+**Testing for AMTT-15:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-15:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-15-implement-faster-whisper-stt-adapter
+git add <specific-files>
+git commit -m "AMTT-15: Implement faster-whisper STT adapter"
+git push -u origin feature/AMTT-15-implement-faster-whisper-stt-adapter
+```
+
+### S2-06 (AMTT-16) --- Verify and document English↔Hindi translation model
 
 **Owner:** Member C\
 **Description:** Verify an IndicTrans2 implementation that supports both
@@ -460,7 +910,37 @@ Hindi→English example are manually checked. - Model loading/memory needs
 are recorded. - If the preferred implementation is incompatible, the
 team records a compatible replacement rather than blocking other work.
 
-### S2-07 --- Implement translation provider adapter
+**Branch naming for AMTT-16:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-16-short-description
+fix/AMTT-16-short-description
+docs/AMTT-16-short-description
+test/AMTT-16-short-description
+```
+
+Example: `feature/AMTT-16-verify-and-document-english-hindi-translation-model`
+
+**Start every task by pulling (AMTT-16):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-16-verify-and-document-english-hindi-translation-model`).
+
+**Testing for AMTT-16:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-16:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-16-verify-and-document-english-hindi-translation-model
+git add <specific-files>
+git commit -m "AMTT-16: Verify and document English↔Hindi translation model"
+git push -u origin feature/AMTT-16-verify-and-document-english-hindi-translation-model
+```
+
+### S2-07 (AMTT-17) --- Implement translation provider adapter
 
 **Owner:** Member C\
 **Description:** Implement the real translation adapter behind the
@@ -470,7 +950,37 @@ Direction-to-source/target language mapping is centralized. - Empty
 output and model exceptions are handled. - Unit tests cover both
 directions using fixtures/mocks; real-model checks are separate.
 
-### S2-08 --- Implement text translation service
+**Branch naming for AMTT-17:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-17-short-description
+fix/AMTT-17-short-description
+docs/AMTT-17-short-description
+test/AMTT-17-short-description
+```
+
+Example: `feature/AMTT-17-implement-translation-provider-adapter`
+
+**Start every task by pulling (AMTT-17):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-17-implement-translation-provider-adapter`).
+
+**Testing for AMTT-17:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-17:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-17-implement-translation-provider-adapter
+git add <specific-files>
+git commit -m "AMTT-17: Implement translation provider adapter"
+git push -u origin feature/AMTT-17-implement-translation-provider-adapter
+```
+
+### S2-08 (AMTT-18) --- Implement text translation service
 
 **Owner:** Member B\
 **Description:** Orchestrate request validation, source/target mapping,
@@ -480,7 +990,37 @@ objects. - Provider errors become controlled service errors. - Unit
 tests cover success and failure paths. - Logs do not print full user
 text by default.
 
-### S2-09 --- Add `POST /api/translate` endpoint
+**Branch naming for AMTT-18:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-18-short-description
+fix/AMTT-18-short-description
+docs/AMTT-18-short-description
+test/AMTT-18-short-description
+```
+
+Example: `feature/AMTT-18-implement-text-translation-service`
+
+**Start every task by pulling (AMTT-18):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-18-implement-text-translation-service`).
+
+**Testing for AMTT-18:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-18:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-18-implement-text-translation-service
+git add <specific-files>
+git commit -m "AMTT-18: Implement text translation service"
+git push -u origin feature/AMTT-18-implement-text-translation-service
+```
+
+### S2-09 (AMTT-19) --- Add `POST /api/translate` endpoint
 
 **Owner:** Member B\
 **Description:** Expose typed-text translation as a JSON API.\
@@ -490,7 +1030,37 @@ errors. - Provider failure returns a safe 5xx response without stack
 traces to the client. - OpenAPI docs show the request and response
 shape.
 
-### S2-10 --- Connect typed-text UI to translation API
+**Branch naming for AMTT-19:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-19-short-description
+fix/AMTT-19-short-description
+docs/AMTT-19-short-description
+test/AMTT-19-short-description
+```
+
+Example: `feature/AMTT-19-add-post-api-translate-endpoint`
+
+**Start every task by pulling (AMTT-19):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-19-add-post-api-translate-endpoint`).
+
+**Testing for AMTT-19:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-19:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-19-add-post-api-translate-endpoint
+git add <specific-files>
+git commit -m "AMTT-19: Add `POST /api/translate` endpoint"
+git push -u origin feature/AMTT-19-add-post-api-translate-endpoint
+```
+
+### S2-10 (AMTT-20) --- Connect typed-text UI to translation API
 
 **Owner:** Member A\
 **Description:** Wire the text box and direction selector to
@@ -499,6 +1069,36 @@ shape.
 directions. - Loading and error states are visible. - Rapid repeat
 clicks do not corrupt the displayed result. - Manual test steps are
 added to `docs/demo-checklist.md`.
+
+**Branch naming for AMTT-20:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-20-short-description
+fix/AMTT-20-short-description
+docs/AMTT-20-short-description
+test/AMTT-20-short-description
+```
+
+Example: `feature/AMTT-20-connect-typed-text-ui-to-translation-api`
+
+**Start every task by pulling (AMTT-20):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-20-connect-typed-text-ui-to-translation-api`).
+
+**Testing for AMTT-20:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-20:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-20-connect-typed-text-ui-to-translation-api
+git add <specific-files>
+git commit -m "AMTT-20: Connect typed-text UI to translation API"
+git push -u origin feature/AMTT-20-connect-typed-text-ui-to-translation-api
+```
 
 **Sprint 2 release checkpoint --- `v0.2-text-translation`:** Demonstrate
 typed English→Hindi and Hindi→English. Run all unit/API tests. Push and
@@ -511,7 +1111,7 @@ merge only after a second member reviews the PRs.
 **Sprint goal:** Complete the main speech workflow from browser
 microphone audio through STT, translation, TTS, and audio playback.
 
-### S3-01 --- Verify Windows-compatible English/Hindi TTS options
+### S3-01 (AMTT-21) --- Verify Windows-compatible English/Hindi TTS options
 
 **Owner:** Member C\
 **Description:** Evaluate a local TTS engine/model for both English and
@@ -523,7 +1123,37 @@ documented supported runtime. - At least one English and one Hindi
 sample are generated. - Memory, startup time, synthesis latency, and
 voice quality observations are documented.
 
-### S3-02 --- Implement TTS provider adapter
+**Branch naming for AMTT-21:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-21-short-description
+fix/AMTT-21-short-description
+docs/AMTT-21-short-description
+test/AMTT-21-short-description
+```
+
+Example: `feature/AMTT-21-verify-windows-compatible-english-hindi-tts-options`
+
+**Start every task by pulling (AMTT-21):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-21-verify-windows-compatible-english-hindi-tts-options`).
+
+**Testing for AMTT-21:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-21:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-21-verify-windows-compatible-english-hindi-tts-options
+git add <specific-files>
+git commit -m "AMTT-21: Verify Windows-compatible English/Hindi TTS options"
+git push -u origin feature/AMTT-21-verify-windows-compatible-english-hindi-tts-options
+```
+
+### S3-02 (AMTT-22) --- Implement TTS provider adapter
 
 **Owner:** Member C\
 **Description:** Implement text-to-speech behind the TTS provider
@@ -533,7 +1163,37 @@ valid audio data with a known format/content type. - Handles unsupported
 language, empty text, and synthesis failures. - Unit tests use a fake
 provider; actual model test is optional/local.
 
-### S3-03 --- Add safe audio input validation and utilities
+**Branch naming for AMTT-22:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-22-short-description
+fix/AMTT-22-short-description
+docs/AMTT-22-short-description
+test/AMTT-22-short-description
+```
+
+Example: `feature/AMTT-22-implement-tts-provider-adapter`
+
+**Start every task by pulling (AMTT-22):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-22-implement-tts-provider-adapter`).
+
+**Testing for AMTT-22:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-22:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-22-implement-tts-provider-adapter
+git add <specific-files>
+git commit -m "AMTT-22: Implement TTS provider adapter"
+git push -u origin feature/AMTT-22-implement-tts-provider-adapter
+```
+
+### S3-03 (AMTT-23) --- Add safe audio input validation and utilities
 
 **Owner:** Member B\
 **Description:** Validate uploaded audio type, size, duration where
@@ -543,7 +1203,37 @@ Unsupported/empty audio returns a clear client error. - Temporary files
 are cleaned up on success and failure. - Client-supplied filenames are
 never used as filesystem paths.
 
-### S3-04 --- Add `POST /api/speech-to-text` endpoint
+**Branch naming for AMTT-23:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-23-short-description
+fix/AMTT-23-short-description
+docs/AMTT-23-short-description
+test/AMTT-23-short-description
+```
+
+Example: `feature/AMTT-23-add-safe-audio-input-validation-and-utilities`
+
+**Start every task by pulling (AMTT-23):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-23-add-safe-audio-input-validation-and-utilities`).
+
+**Testing for AMTT-23:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-23:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-23-add-safe-audio-input-validation-and-utilities
+git add <specific-files>
+git commit -m "AMTT-23: Add safe audio input validation and utilities"
+git push -u origin feature/AMTT-23-add-safe-audio-input-validation-and-utilities
+```
+
+### S3-04 (AMTT-24) --- Add `POST /api/speech-to-text` endpoint
 
 **Owner:** Member B\
 **Description:** Accept audio upload and return transcript,
@@ -552,7 +1242,37 @@ language/direction metadata, and status.\
 invalid media and STT failures cleanly. - Response shape is
 documented. - Tests cover mocked success and failure.
 
-### S3-05 --- Add `POST /api/speech-translate` orchestration endpoint
+**Branch naming for AMTT-24:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-24-short-description
+fix/AMTT-24-short-description
+docs/AMTT-24-short-description
+test/AMTT-24-short-description
+```
+
+Example: `feature/AMTT-24-add-post-api-speech-to-text-endpoint`
+
+**Start every task by pulling (AMTT-24):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-24-add-post-api-speech-to-text-endpoint`).
+
+**Testing for AMTT-24:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-24:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-24-add-post-api-speech-to-text-endpoint
+git add <specific-files>
+git commit -m "AMTT-24: Add `POST /api/speech-to-text` endpoint"
+git push -u origin feature/AMTT-24-add-post-api-speech-to-text-endpoint
+```
+
+### S3-05 (AMTT-25) --- Add `POST /api/speech-translate` orchestration endpoint
 
 **Owner:** Member B\
 **Description:** Accept source audio and direction, call STT then
@@ -564,7 +1284,37 @@ returned as a file response or via a documented job/result flow; do not
 invent a mixed JSON/binary format. - Errors identify the failed stage
 without exposing internal traces.
 
-### S3-06 --- Implement browser microphone permission and capture
+**Branch naming for AMTT-25:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-25-short-description
+fix/AMTT-25-short-description
+docs/AMTT-25-short-description
+test/AMTT-25-short-description
+```
+
+Example: `feature/AMTT-25-add-post-api-speech-translate-orchestration-endpoint`
+
+**Start every task by pulling (AMTT-25):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-25-add-post-api-speech-translate-orchestration-endpoint`).
+
+**Testing for AMTT-25:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-25:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-25-add-post-api-speech-translate-orchestration-endpoint
+git add <specific-files>
+git commit -m "AMTT-25: Add `POST /api/speech-translate` orchestration endpoint"
+git push -u origin feature/AMTT-25-add-post-api-speech-translate-orchestration-endpoint
+```
+
+### S3-06 (AMTT-26) --- Implement browser microphone permission and capture
 
 **Owner:** Member A\
 **Description:** Capture microphone audio only after explicit user
@@ -575,7 +1325,37 @@ the UI. - Recording indicator is visible while recording. - Audio is
 stopped and media tracks are released when recording ends or page state
 resets.
 
-### S3-07 --- Upload captured audio and show source transcript
+**Branch naming for AMTT-26:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-26-short-description
+fix/AMTT-26-short-description
+docs/AMTT-26-short-description
+test/AMTT-26-short-description
+```
+
+Example: `feature/AMTT-26-implement-browser-microphone-permission-and-capture`
+
+**Start every task by pulling (AMTT-26):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-26-implement-browser-microphone-permission-and-capture`).
+
+**Testing for AMTT-26:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-26:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-26-implement-browser-microphone-permission-and-capture
+git add <specific-files>
+git commit -m "AMTT-26: Implement browser microphone permission and capture"
+git push -u origin feature/AMTT-26-implement-browser-microphone-permission-and-capture
+```
+
+### S3-07 (AMTT-27) --- Upload captured audio and show source transcript
 
 **Owner:** Member A\
 **Description:** Send captured audio to the backend with the chosen
@@ -585,7 +1365,37 @@ request. - User sees progress while processing. - Source transcript is
 displayed separately from translated text. - Network/API errors are
 recoverable.
 
-### S3-08 --- Play generated translated audio
+**Branch naming for AMTT-27:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-27-short-description
+fix/AMTT-27-short-description
+docs/AMTT-27-short-description
+test/AMTT-27-short-description
+```
+
+Example: `feature/AMTT-27-upload-captured-audio-and-show-source-transcript`
+
+**Start every task by pulling (AMTT-27):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-27-upload-captured-audio-and-show-source-transcript`).
+
+**Testing for AMTT-27:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-27:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-27-upload-captured-audio-and-show-source-transcript
+git add <specific-files>
+git commit -m "AMTT-27: Upload captured audio and show source transcript"
+git push -u origin feature/AMTT-27-upload-captured-audio-and-show-source-transcript
+```
+
+### S3-08 (AMTT-28) --- Play generated translated audio
 
 **Owner:** Member A\
 **Description:** Handle the generated audio response and provide
@@ -595,7 +1405,37 @@ browser. - Previous audio URLs/resources are cleaned up when replaced. -
 Audio format and content type match the API contract. - Failed playback
 shows a useful message.
 
-### S3-09 --- Add cancellation, reset and duplicate-request protection
+**Branch naming for AMTT-28:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-28-short-description
+fix/AMTT-28-short-description
+docs/AMTT-28-short-description
+test/AMTT-28-short-description
+```
+
+Example: `feature/AMTT-28-play-generated-translated-audio`
+
+**Start every task by pulling (AMTT-28):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-28-play-generated-translated-audio`).
+
+**Testing for AMTT-28:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-28:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-28-play-generated-translated-audio
+git add <specific-files>
+git commit -m "AMTT-28: Play generated translated audio"
+git push -u origin feature/AMTT-28-play-generated-translated-audio
+```
+
+### S3-09 (AMTT-29) --- Add cancellation, reset and duplicate-request protection
 
 **Owner:** Member A\
 **Description:** Prevent accidental duplicate submissions and let the
@@ -605,7 +1445,37 @@ is active. - Reset clears visible transcripts/errors and stops audio
 playback. - Late responses do not overwrite a newer request. -
 Cancellation is implemented only where supported and documented.
 
-### S3-10 --- Run speech pipeline integration tests
+**Branch naming for AMTT-29:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-29-short-description
+fix/AMTT-29-short-description
+docs/AMTT-29-short-description
+test/AMTT-29-short-description
+```
+
+Example: `feature/AMTT-29-add-cancellation-reset-and-duplicate-request-protection`
+
+**Start every task by pulling (AMTT-29):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-29-add-cancellation-reset-and-duplicate-request-protection`).
+
+**Testing for AMTT-29:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-29:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-29-add-cancellation-reset-and-duplicate-request-protection
+git add <specific-files>
+git commit -m "AMTT-29: Add cancellation, reset and duplicate-request protection"
+git push -u origin feature/AMTT-29-add-cancellation-reset-and-duplicate-request-protection
+```
+
+### S3-10 (AMTT-30) --- Run speech pipeline integration tests
 
 **Owner:** Member D\
 **Description:** Add integration tests using fake providers and manual
@@ -615,6 +1485,36 @@ translated text → audio response using fakes. - Both directions are
 tested. - Manual checklist covers microphone denial, invalid audio, slow
 model, and successful playback. - Actual-model smoke test instructions
 are separate from the default test suite.
+
+**Branch naming for AMTT-30:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-30-short-description
+fix/AMTT-30-short-description
+docs/AMTT-30-short-description
+test/AMTT-30-short-description
+```
+
+Example: `feature/AMTT-30-run-speech-pipeline-integration-tests`
+
+**Start every task by pulling (AMTT-30):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-30-run-speech-pipeline-integration-tests`).
+
+**Testing for AMTT-30:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-30:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-30-run-speech-pipeline-integration-tests
+git add <specific-files>
+git commit -m "AMTT-30: Run speech pipeline integration tests"
+git push -u origin feature/AMTT-30-run-speech-pipeline-integration-tests
+```
 
 **Sprint 3 release checkpoint --- `v0.3-speech-pipeline`:** Demonstrate
 a full English→Hindi and Hindi→English speech round trip. Run automated
@@ -628,7 +1528,7 @@ limitations.
 **Sprint goal:** Deliver a robust mini-project that can be cloned,
 installed, tested, demonstrated, and evaluated by the instructor.
 
-### S4-01 --- Improve end-to-end UI states and accessibility
+### S4-01 (AMTT-31) --- Improve end-to-end UI states and accessibility
 
 **Owner:** Member A\
 **Description:** Polish responsive layout, labels, keyboard navigation,
@@ -637,7 +1537,37 @@ loading indicators, transcript separation, and errors.\
 indicators and keyboard operation are usable. - Loading/success/error
 states are distinguishable. - Desktop demo layout is clean and readable.
 
-### S4-02 --- Add request timeout and model failure handling
+**Branch naming for AMTT-31:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-31-short-description
+fix/AMTT-31-short-description
+docs/AMTT-31-short-description
+test/AMTT-31-short-description
+```
+
+Example: `feature/AMTT-31-improve-end-to-end-ui-states-and-accessibility`
+
+**Start every task by pulling (AMTT-31):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-31-improve-end-to-end-ui-states-and-accessibility`).
+
+**Testing for AMTT-31:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-31:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-31-improve-end-to-end-ui-states-and-accessibility
+git add <specific-files>
+git commit -m "AMTT-31: Improve end-to-end UI states and accessibility"
+git push -u origin feature/AMTT-31-improve-end-to-end-ui-states-and-accessibility
+```
+
+### S4-02 (AMTT-32) --- Add request timeout and model failure handling
 
 **Owner:** Member B\
 **Description:** Add controlled timeout behavior and stable error
@@ -647,7 +1577,37 @@ Python stack trace or sensitive local path is returned. - Timeout and
 provider errors are logged with request correlation IDs. - Tests cover
 each stage's failure.
 
-### S4-03 --- Add structured logging and timing metrics
+**Branch naming for AMTT-32:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-32-short-description
+fix/AMTT-32-short-description
+docs/AMTT-32-short-description
+test/AMTT-32-short-description
+```
+
+Example: `feature/AMTT-32-add-request-timeout-and-model-failure-handling`
+
+**Start every task by pulling (AMTT-32):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-32-add-request-timeout-and-model-failure-handling`).
+
+**Testing for AMTT-32:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-32:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-32-add-request-timeout-and-model-failure-handling
+git add <specific-files>
+git commit -m "AMTT-32: Add request timeout and model failure handling"
+git push -u origin feature/AMTT-32-add-request-timeout-and-model-failure-handling
+```
+
+### S4-03 (AMTT-33) --- Add structured logging and timing metrics
 
 **Owner:** Member B\
 **Description:** Record request IDs, stage timings, outcome, and
@@ -658,7 +1618,37 @@ timing. - Sensitive payloads are not logged by default. - Logs are
 useful for diagnosing failures. - Documentation explains where local
 logs are written.
 
-### S4-04 --- Add translation and transcription evaluation set
+**Branch naming for AMTT-33:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-33-short-description
+fix/AMTT-33-short-description
+docs/AMTT-33-short-description
+test/AMTT-33-short-description
+```
+
+Example: `feature/AMTT-33-add-structured-logging-and-timing-metrics`
+
+**Start every task by pulling (AMTT-33):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-33-add-structured-logging-and-timing-metrics`).
+
+**Testing for AMTT-33:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-33:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-33-add-structured-logging-and-timing-metrics
+git add <specific-files>
+git commit -m "AMTT-33: Add structured logging and timing metrics"
+git push -u origin feature/AMTT-33-add-structured-logging-and-timing-metrics
+```
+
+### S4-04 (AMTT-34) --- Add translation and transcription evaluation set
 
 **Owner:** Member D\
 **Description:** Create a small, consent-safe set of short English/Hindi
@@ -670,7 +1660,37 @@ private recordings or personal data. - Expected outputs are reviewed by
 a competent Hindi/English speaker. - Evaluation is documented as a small
 demo set, not a scientific benchmark.
 
-### S4-05 --- Add performance and memory benchmark script
+**Branch naming for AMTT-34:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-34-short-description
+fix/AMTT-34-short-description
+docs/AMTT-34-short-description
+test/AMTT-34-short-description
+```
+
+Example: `feature/AMTT-34-add-translation-and-transcription-evaluation-set`
+
+**Start every task by pulling (AMTT-34):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-34-add-translation-and-transcription-evaluation-set`).
+
+**Testing for AMTT-34:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-34:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-34-add-translation-and-transcription-evaluation-set
+git add <specific-files>
+git commit -m "AMTT-34: Add translation and transcription evaluation set"
+git push -u origin feature/AMTT-34-add-translation-and-transcription-evaluation-set
+```
+
+### S4-05 (AMTT-35) --- Add performance and memory benchmark script
 
 **Owner:** Member C\
 **Description:** Measure warm and cold model startup, per-stage latency,
@@ -681,7 +1701,37 @@ each direction when hardware allows. - Report identifies CPU/GPU
 configuration and limitations. - No hard performance guarantee is
 claimed without measurements.
 
-### S4-06 --- Harden input and temporary-file handling
+**Branch naming for AMTT-35:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-35-short-description
+fix/AMTT-35-short-description
+docs/AMTT-35-short-description
+test/AMTT-35-short-description
+```
+
+Example: `feature/AMTT-35-add-performance-and-memory-benchmark-script`
+
+**Start every task by pulling (AMTT-35):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-35-add-performance-and-memory-benchmark-script`).
+
+**Testing for AMTT-35:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-35:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-35-add-performance-and-memory-benchmark-script
+git add <specific-files>
+git commit -m "AMTT-35: Add performance and memory benchmark script"
+git push -u origin feature/AMTT-35-add-performance-and-memory-benchmark-script
+```
+
+### S4-06 (AMTT-36) --- Harden input and temporary-file handling
 
 **Owner:** Member B\
 **Description:** Review upload limits, file type validation, temporary
@@ -691,7 +1741,37 @@ allowed in development CORS configuration. - Upload size and type checks
 are tested. - Temporary files are cleaned even when inference fails. -
 No endpoint exposes arbitrary filesystem access.
 
-### S4-07 --- Write Windows setup and troubleshooting guide
+**Branch naming for AMTT-36:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-36-short-description
+fix/AMTT-36-short-description
+docs/AMTT-36-short-description
+test/AMTT-36-short-description
+```
+
+Example: `feature/AMTT-36-harden-input-and-temporary-file-handling`
+
+**Start every task by pulling (AMTT-36):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-36-harden-input-and-temporary-file-handling`).
+
+**Testing for AMTT-36:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-36:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-36-harden-input-and-temporary-file-handling
+git add <specific-files>
+git commit -m "AMTT-36: Harden input and temporary-file handling"
+git push -u origin feature/AMTT-36-harden-input-and-temporary-file-handling
+```
+
+### S4-07 (AMTT-37) --- Write Windows setup and troubleshooting guide
 
 **Owner:** Member D\
 **Description:** Document a clean Windows setup, model downloads,
@@ -702,7 +1782,37 @@ start, frontend start, and tests. - Explains model download/cache and
 GPU fallback. - Documents the MLX incompatibility lesson and states that
 Apple-only runtime models must not be selected.
 
-### S4-08 --- Complete API and user documentation
+**Branch naming for AMTT-37:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-37-short-description
+fix/AMTT-37-short-description
+docs/AMTT-37-short-description
+test/AMTT-37-short-description
+```
+
+Example: `feature/AMTT-37-write-windows-setup-and-troubleshooting-guide`
+
+**Start every task by pulling (AMTT-37):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-37-write-windows-setup-and-troubleshooting-guide`).
+
+**Testing for AMTT-37:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-37:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-37-write-windows-setup-and-troubleshooting-guide
+git add <specific-files>
+git commit -m "AMTT-37: Write Windows setup and troubleshooting guide"
+git push -u origin feature/AMTT-37-write-windows-setup-and-troubleshooting-guide
+```
+
+### S4-08 (AMTT-38) --- Complete API and user documentation
 
 **Owner:** Member B\
 **Description:** Document endpoints, request/response examples,
@@ -712,7 +1822,37 @@ and run instructions match current commands. - English↔Hindi scope and
 out-of-scope features are clear. - Known limitations and troubleshooting
 are included.
 
-### S4-09 --- Run full regression and acceptance checklist
+**Branch naming for AMTT-38:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-38-short-description
+fix/AMTT-38-short-description
+docs/AMTT-38-short-description
+test/AMTT-38-short-description
+```
+
+Example: `feature/AMTT-38-complete-api-and-user-documentation`
+
+**Start every task by pulling (AMTT-38):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-38-complete-api-and-user-documentation`).
+
+**Testing for AMTT-38:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-38:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-38-complete-api-and-user-documentation
+git add <specific-files>
+git commit -m "AMTT-38: Complete API and user documentation"
+git push -u origin feature/AMTT-38-complete-api-and-user-documentation
+```
+
+### S4-09 (AMTT-39) --- Run full regression and acceptance checklist
 
 **Owner:** Member D\
 **Description:** Run automated tests and execute the final demo
@@ -722,7 +1862,37 @@ directions work through typed-text and speech workflows. - Microphone
 denial, invalid input, and model failure are tested. - Any remaining
 known bug is documented and linked to Jira.
 
-### S4-10 --- Prepare final demo, release tag and handoff
+**Branch naming for AMTT-39:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-39-short-description
+fix/AMTT-39-short-description
+docs/AMTT-39-short-description
+test/AMTT-39-short-description
+```
+
+Example: `feature/AMTT-39-run-full-regression-and-acceptance-checklist`
+
+**Start every task by pulling (AMTT-39):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-39-run-full-regression-and-acceptance-checklist`).
+
+**Testing for AMTT-39:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-39:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-39-run-full-regression-and-acceptance-checklist
+git add <specific-files>
+git commit -m "AMTT-39: Run full regression and acceptance checklist"
+git push -u origin feature/AMTT-39-run-full-regression-and-acceptance-checklist
+```
+
+### S4-10 (AMTT-40) --- Prepare final demo, release tag and handoff
 
 **Owner:** Member A (demo lead), all members contribute\
 **Description:** Prepare a repeatable demo script, final architecture
@@ -732,6 +1902,36 @@ Hindi→English. - Repository has no secrets, model weights, private
 recordings, or generated test artifacts committed. - `main` is green and
 all accepted work is merged. - Release tag `v1.0.0` is created and final
 setup/demo steps are documented.
+
+**Branch naming for AMTT-40:** Use one branch per Jira item; select the prefix that matches the change type.
+
+``` text
+feature/AMTT-40-short-description
+fix/AMTT-40-short-description
+docs/AMTT-40-short-description
+test/AMTT-40-short-description
+```
+
+Example: `feature/AMTT-40-prepare-final-demo-release-tag-and-handoff`
+
+**Start every task by pulling (AMTT-40):** From the repository root, run `git switch main` and `git pull origin main`, then create the Jira-specific branch shown below (`git switch -c feature/AMTT-40-prepare-final-demo-release-tag-and-handoff`).
+
+**Testing for AMTT-40:** Run the tests relevant to your change. For backend changes, activate the virtual environment and run:
+
+``` powershell
+python -m pytest
+```
+
+**Required Git commands for AMTT-40:**
+
+``` powershell
+git switch main
+git pull origin main
+git switch -c feature/AMTT-40-prepare-final-demo-release-tag-and-handoff
+git add <specific-files>
+git commit -m "AMTT-40: Prepare final demo, release tag and handoff"
+git push -u origin feature/AMTT-40-prepare-final-demo-release-tag-and-handoff
+```
 
 **Sprint 4 release checkpoint --- `v1.0.0`:** Freeze scope, run final
 regression, demo the product, and hand off the repository and
