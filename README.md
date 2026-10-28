@@ -99,8 +99,25 @@ branch protection must be enabled in GitHub settings by an administrator.
 - [x] AMTT-7 — FastAPI application entry point.
 - [x] AMTT-8 — Health endpoint and API tests.
 - [x] AMTT-9 — Initial browser UI shell.
-- [ ] AMTT-10 — Git branching, PR, and review rules.
+- [x] AMTT-10 — Git branching, PR, and review rules.
 
-Sprint 1 remains in progress until all ten items and the release
-checkpoint are completed. The detailed plan is maintained in
+All ten Sprint 1 Scrum items are complete. The separate `v0.1-foundation`
+release checkpoint remains pending until its tag is created and all four
+members confirm they can pull and run the skeleton. See `IMPLEMENTATION.md`
+for the checkpoint steps.
+
+## Sprint 2 checklist — Working text pipeline and model adapters
+
+- [ ] S2-01 — Define request and response schemas.
+- [ ] S2-02 — Define STT, translation and TTS provider interfaces.
+- [ ] S2-03 — Implement fake providers for development.
+- [ ] S2-04 — Verify and document Windows-compatible STT model.
+- [ ] S2-05 — Implement faster-whisper STT adapter.
+- [ ] S2-06 — Verify and document English↔Hindi translation model.
+- [ ] S2-07 — Implement translation provider adapter.
+- [ ] S2-08 — Implement text translation service.
+- [ ] S2-09 — Add `POST /api/translate` endpoint.
+- [ ] S2-10 — Connect typed-text UI to translation API.
+
+Sprint 2's `v0.2-text-translation` release checkpoint is described in
 `IMPLEMENTATION.md`.

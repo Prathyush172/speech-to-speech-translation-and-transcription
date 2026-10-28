@@ -372,7 +372,7 @@ language directions are selectable. - Controls have labels and
 disabled/loading states. - No model/API calls are required for this
 scaffold.
 
-### S1-10 --- Establish Git branching, PR and review rules
+### S1-10 --- Establish Git branching, PR and review rules — **Completed**
 
 **Owner:** Member D\
 **Description:** Document shared Git workflow and ensure every member
@@ -382,10 +382,9 @@ allow. - PR template/checklist exists or the README contains the
 equivalent. - Each member makes one small test PR or contributes a
 reviewed change. - Team agrees never to force-push shared `main`.
 
-The workflow documentation and PR template are on
-`docs/AMTT-10-git-workflow`. Keep this Scrum item open until the PR is
-created and reviewed and a repository administrator confirms whether
-`main` protection can be enabled.
+The workflow documentation and PR template were merged to `main` in PR
+#8. Branch protection is configured separately by a repository
+administrator if repository permissions allow.
 
 **Sprint 1 release checkpoint --- `v0.1-foundation`:** Merge all
 accepted changes, run tests, tag the commit, and confirm all four
