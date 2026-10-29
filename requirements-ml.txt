@@ -13,3 +13,9 @@ transformers>=4.40,<5
 safetensors>=0.4,<1
 sentencepiece>=0.2,<1
 IndicTransToolkit>=1.0,<2
+
+# TTS dependencies for the optional Kokoro provider evaluation/adapter.
+# Install only in an environment that will run real TTS; Windows also needs
+# the official espeak-ng MSI runtime documented in docs/tts-model-selection.md.
+kokoro>=0.9.4,<1
+soundfile>=0.13,<1
