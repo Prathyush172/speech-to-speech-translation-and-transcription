@@ -9,6 +9,8 @@ LanguageCode = Literal["en", "hi"]
 
 @dataclass(frozen=True)
 class AudioInput:
+    """Audio data and the optional metadata needed by an STT provider."""
+
     data: bytes
     content_type: str | None = None
     filename: str | Path | None = None
@@ -16,10 +18,22 @@ class AudioInput:
 
 @dataclass(frozen=True)
 class STTResult:
+    """A transcription and provider-reported language metadata."""
+
     transcript: str
     language: LanguageCode | str | None = None
     confidence: float | None = None
     metadata: dict[str, object] = field(default_factory=dict)
+
+    @property
+    def text(self) -> str:
+        """Compatibility alias for consumers that call the transcript text."""
+        return self.transcript
+
+    @property
+    def detected_language(self) -> LanguageCode | str | None:
+        """Compatibility alias for the detected or requested language."""
+        return self.language
 
 
 class STTProviderError(Exception):
@@ -28,6 +42,8 @@ class STTProviderError(Exception):
 
 @runtime_checkable
 class STTProvider(Protocol):
+    """Transcribe audio without exposing a concrete model implementation."""
+
     def transcribe(
         self,
         audio: AudioInput | bytes,

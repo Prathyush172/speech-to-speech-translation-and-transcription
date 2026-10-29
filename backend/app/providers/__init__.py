@@ -1,15 +1,25 @@
-"""Model provider interfaces and development providers."""
+"""Model provider interfaces and controlled provider failures."""
 
-from app.providers.fake import FakeSTTProvider, FakeTTSProvider, FakeTranslationProvider
-from app.providers.stt import AudioInput, STTProvider, STTProviderError, STTResult
-from app.providers.translation import TranslationProvider, TranslationProviderError
-from app.providers.tts import ManagedAudioArtifact, TTSProvider, TTSProviderError, TTSResult
+from app.providers.stt import (
+    AudioInput,
+    STTProvider,
+    STTProviderError,
+    STTResult,
+)
+from app.providers.translation import (
+    TranslationProvider,
+    TranslationProviderError,
+    TranslationResult,
+)
+from app.providers.tts import (
+    ManagedAudioArtifact,
+    TTSProvider,
+    TTSProviderError,
+    TTSResult,
+)
 
 __all__ = [
     "AudioInput",
-    "FakeSTTProvider",
-    "FakeTTSProvider",
-    "FakeTranslationProvider",
     "ManagedAudioArtifact",
     "STTProvider",
     "STTProviderError",
@@ -19,4 +29,5 @@ __all__ = [
     "TTSResult",
     "TranslationProvider",
     "TranslationProviderError",
+    "TranslationResult",
 ]

@@ -79,10 +79,10 @@ provider interfaces remain independently replaceable.
 
 #### Speech-to-text
 
-`STTProvider` accepts validated audio input and returns a typed transcript,
-detected or requested language metadata, and optional confidence/metadata.
-It is responsible only for transcription. Invalid audio, empty input, unsupported
-language, and inference failures are represented as provider exceptions.
+`STTProvider` accepts `AudioInput` or raw bytes and returns a typed `STTResult`
+with transcript, detected or requested language metadata, confidence, and optional
+metadata. It is responsible only for transcription. Invalid audio, empty input,
+unsupported language, and inference failures are represented as provider exceptions.
 
 The real implementation may use a local speech model. Development and default
 automated tests use a fake implementation that has no network or model download
@@ -91,9 +91,9 @@ side effects.
 #### Translation
 
 `TranslationProvider` accepts source text and a supported direction. It returns
-translated text and language metadata. Direction-to-language mapping is
-centralized in configuration or a small policy type rather than in route
-handlers.
+plain translated text or a typed `TranslationResult` containing source/target
+language metadata. Direction-to-language mapping is centralized in configuration
+or a small policy type rather than in route handlers.
 
 The real implementation may use a verified English ↔ Hindi model. Development
 and tests use `FakeTranslationProvider`, which returns visibly prefixed mock
@@ -104,9 +104,9 @@ no network or model-download side effects; `PROVIDER_MODE=real` disables them.
 
 #### Text-to-speech
 
-`TTSProvider` accepts target text and a target language, then returns audio
-bytes plus the known format/content type. Empty text, unsupported language,
-and synthesis failures are represented explicitly.
+`TTSProvider` accepts target text and a target language, then returns raw bytes,
+a typed `TTSResult` with format/content metadata, or a `ManagedAudioArtifact`.
+Empty text, unsupported language, and synthesis failures are represented explicitly.
 
 A real implementation must be a separately verified local Windows-compatible
 provider. Tests use a fake provider and do not claim that generated mock audio

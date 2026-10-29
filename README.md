@@ -133,7 +133,7 @@ can pull and run the skeleton.
 ### Sprint 2 — Working text pipeline and model adapters
 
 - [x] S2-01 / AMTT-11 — Define request and response schemas.
-- [ ] S2-02 / AMTT-12 — Define STT, translation, and TTS provider interfaces.
+- [x] S2-02 / AMTT-12 — Define STT, translation, and TTS provider interfaces.
 - [x] S2-03 / AMTT-13 — Implement fake providers for development.
 - [ ] S2-04 / AMTT-14 — Verify and document Windows-compatible STT model.
 - [ ] S2-05 / AMTT-15 — Implement faster-whisper STT adapter.
