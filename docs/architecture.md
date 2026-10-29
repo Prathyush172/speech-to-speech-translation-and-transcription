@@ -103,6 +103,9 @@ output and must not be described as real translation. The provider boundary
 prevents route and service code from depending on a model package or model
 identifier. `PROVIDER_MODE=mock` also installs fake STT and TTS providers with
 no network or model-download side effects; `PROVIDER_MODE=real` disables them.
+The preferred directional IndicTrans2 checkpoints, official sources, language
+codes, Windows setup, and measured/manual verification status are recorded in
+[translation model selection](translation-model-selection.md).
 
 #### Text-to-speech
 

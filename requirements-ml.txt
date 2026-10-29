@@ -4,3 +4,12 @@
 # requirements-dev.txt so normal setup and tests do not download models.
 
 faster-whisper>=1.1.0,<2
+
+# Translation dependencies for an optional IndicTrans2 provider adapter.
+# Keep normal setup and tests offline; install and verify these only when
+# implementing or smoke-testing the real translation provider.
+torch>=2.1,<3
+transformers>=4.40,<5
+safetensors>=0.4,<1
+sentencepiece>=0.2,<1
+IndicTransToolkit>=1.0,<2
