@@ -17,12 +17,34 @@ must be labeled as such.
 
 ## Core text pipeline
 
-- [ ] Select `en-to-hi` and submit non-empty English text.
-- [ ] Verify the source text, Hindi translation, and success status are shown.
-- [ ] Select `hi-to-en` and submit non-empty Hindi text.
-- [ ] Verify the source text, English translation, and success status are shown.
-- [ ] Submit empty or whitespace-only text and verify useful validation.
-- [ ] Submit an invalid direction and verify useful API/UI feedback.
+### Typed-text UI setup
+
+1. Start the mock backend from the repository root with
+   `python -m uvicorn backend.app.main:app --reload` (Windows users may need
+   to activate the virtual environment first).
+2. Serve the frontend from the repository root, for example with
+   `python -m http.server 5500 --directory frontend`, then open
+   `http://localhost:5500`.
+3. Keep the browser developer tools Network panel open for API checks.
+
+- [ ] Select `en-to-hi`, enter a short English phrase, and click **Translate text**.
+- [ ] Verify the request is `POST /api/translate`, the source block, Hindi result
+  block, loading label, and success status are all visible as appropriate.
+- [ ] Select `hi-to-en`, enter a short Hindi phrase, and click **Translate text**.
+- [ ] Verify the source block and English result block show the correct entered
+  text and response.
+- [ ] Enter whitespace-only text and verify the button remains disabled or that
+  submitting shows useful validation.
+- [ ] Change direction while a translation request is in progress and verify the
+  old request cannot replace the new direction or leave the button stuck loading.
+- [ ] Click rapidly while a request is pending and verify the loading state remains
+  stable and only the newest result is displayed.
+- [ ] Stop the backend or configure a provider failure, then repeat the request.
+  Verify the safe error message appears without a traceback and the button resets.
+- [ ] Submit an invalid direction through the API and verify a useful 4xx response.
+
+The mock providers are intended for repeatable UI/API checks. Any output from
+real model weights is a separate manual verification and must be labeled as such.
 
 ## Speech pipeline
 

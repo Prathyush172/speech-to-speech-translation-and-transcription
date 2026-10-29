@@ -91,9 +91,10 @@
                 <span id="character-count">0 / 1000</span>
               </div>
 
-              <button class="translate-button" type="button" disabled
-                title="Translation will be available when the service is connected">
-                <span aria-hidden="true">✳</span> Translate text <span aria-hidden="true">→</span>
+              <button class="translate-button" id="translate-button" type="button" disabled>
+                <span aria-hidden="true">✳</span>
+                <span id="translate-button-label">Translate text</span>
+                <span aria-hidden="true">→</span>
               </button>
             </section>
 
@@ -107,12 +108,24 @@
               </div>
 
               <div class="result-placeholder" aria-live="polite">
-                <div class="placeholder-icon" aria-hidden="true">文</div>
-                <p class="placeholder-title">Your translation will appear here</p>
-                <p class="placeholder-copy">
-                  Add a message on the left to get started. Your transcript and
-                  translation will be shown side by side.
-                </p>
+                <div id="result-placeholder-content">
+                  <div class="placeholder-icon" aria-hidden="true">文</div>
+                  <p class="placeholder-title">Your translation will appear here</p>
+                  <p class="placeholder-copy">
+                    Add a message on the left to get started. Your transcript and
+                    translation will be shown separately.
+                  </p>
+                </div>
+                <div id="translation-output" class="translation-output" hidden>
+                  <div class="output-block">
+                    <span class="output-label">SOURCE</span>
+                    <p id="source-output"></p>
+                  </div>
+                  <div class="output-block translated-output">
+                    <span class="output-label">TRANSLATION</span>
+                    <p id="translated-output"></p>
+                  </div>
+                </div>
               </div>
 
               <div class="audio-player">
@@ -129,9 +142,9 @@
             </section>
           </div>
 
-          <div class="workspace-footnote" role="status" aria-live="polite">
+          <div class="workspace-footnote" id="workspace-status" role="status" aria-live="polite">
             <span class="footnote-icon" aria-hidden="true">i</span>
-            This is a UI preview. Translation, recording, and audio playback are not connected yet.
+            <span id="workspace-status-text">Typed translation is ready. Microphone and audio playback are not connected yet.</span>
           </div>
         </section>
       </main>
