@@ -45,43 +45,65 @@ and approves that integration.
 The repository is designed to work on Windows with Python 3.11.
 
 ```powershell
-git clone https://github.com/Kushal-phbs/speech-to-speech-translation-and-transcription.git
+git clone https://github.com/Prathyush172/speech-to-speech-translation-and-transcription.git
 cd speech-to-speech-translation-and-transcription
-./scripts/setup_windows.ps1
+powershell -ExecutionPolicy Bypass -File .\scripts\setup_windows.ps1
 .\.venv\Scripts\Activate.ps1
 python -m pytest
 ```
 
-The setup script requires Python 3.11, creates `.venv`, and installs the
+`setup_windows.ps1` requires Python 3.11, creates `.venv`, and installs the
 runtime and test dependencies. Heavy STT, translation, and TTS packages are
-not included in the default setup; they are listed separately in
-`requirements-ml.txt` and must only be installed when an actual model adapter
-is implemented. The application uses local defaults; copy `.env.example` to
-`.env` to override the host, port, log level, model IDs/cache path, device, or
-maximum upload size. Invalid values are reported with the setting name when the
-application starts. `.env` and other environment-specific files are ignored by
-Git.
+listed in `requirements-ml.txt`; they are not installed during normal setup and
+should only be installed when testing or implementing a real model adapter.
 
-Start the API from the repository root with:
+### Configure the environment
+
+The application works with mock providers by default. To customize settings,
+copy the example environment file:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Configuration includes the API host and port, provider mode, model IDs, cache
+directory, device, compute type, log level, and maximum upload size. `.env` is
+git-ignored. Invalid settings are reported with the setting name at startup.
+See [.env.example](.env.example) for all available variables.
+
+### Start the API
 
 ```powershell
 python -m uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port 8000
 ```
 
-Interactive API documentation is available at `http://127.0.0.1:8000/docs`.
-Application startup initializes only configuration and logging; speech models
-are not loaded or downloaded. The default `PROVIDER_MODE=mock` installs clearly
-marked deterministic fake providers for UI and API development. Fake output is
-not a real transcription or translation and requires no network or model
-download. Set `PROVIDER_MODE=real` to disable fake providers when real adapters
-are configured.
-The `GET /api/health` endpoint returns `{"status": "ok"}`. Run its API tests
-from the repository root with `python -m pytest`.
+Then open:
 
-The UI scaffold can be previewed by opening `frontend/index.html` in a desktop
-browser. Direction selection and text character count work locally; microphone,
-translation, and audio controls remain disabled until those features are wired
-to the API.
+- Health check: <http://127.0.0.1:8000/api/health>
+- Swagger UI: <http://127.0.0.1:8000/docs>
+- ReDoc: <http://127.0.0.1:8000/redoc>
+
+Startup does not download speech models. The default `PROVIDER_MODE=mock` uses
+deterministic fake providers, so the API and UI can be developed without a
+GPU, network download, or real model package. Real-provider mode is intended
+only after its model adapter is configured and dependencies are installed.
+
+### Open the browser UI
+
+Open [frontend/index.html](frontend/index.html) in a desktop browser while the
+API is running. The typed-text UI is connected to `POST /api/translate` for
+English → Hindi and Hindi → English requests; loading and error states are
+shown in the browser. Microphone capture and translated-audio playback are not
+yet implemented.
+
+### Run tests
+
+```powershell
+python -m pytest
+```
+
+Real-model smoke tests are separate from the normal suite and remain skipped
+until their required environment variables and local resources are provided.
 
 ## Project workflow
 
@@ -135,21 +157,19 @@ can pull and run the skeleton.
 - [x] S2-01 / AMTT-11 — Define request and response schemas.
 - [x] S2-02 / AMTT-12 — Define STT, translation, and TTS provider interfaces.
 - [x] S2-03 / AMTT-13 — Implement fake providers for development.
-- [x] S2-04 / AMTT-14 — Verify and document Windows-compatible STT model.
-- [x] S2-05 / AMTT-15 — Implement faster-whisper STT adapter.
-- [x] S2-04 / AMTT-14 — Verify and document Windows-compatible STT model. See the [STT model selection notes](docs/stt-model-selection.md).
-- [x] S2-05 / AMTT-15 — Implement faster-whisper STT adapter.
-- [x] S2-06 / AMTT-16 — Verify and document English↔Hindi translation model. See the [translation model selection notes](docs/translation-model-selection.md).
-- [x] S2-07 / AMTT-17 — Implement translation provider adapter.
-- [x] S2-08 / AMTT-18 — Implement text translation service.
+- [x] S2-04 / AMTT-14 — Verify and document the Windows-compatible STT model. See [STT model selection](docs/stt-model-selection.md).
+- [x] S2-05 / AMTT-15 — Implement the faster-whisper STT adapter.
+- [x] S2-06 / AMTT-16 — Verify and document the English↔Hindi translation model. See [translation model selection](docs/translation-model-selection.md).
+- [x] S2-07 / AMTT-17 — Implement the translation provider adapter.
+- [x] S2-08 / AMTT-18 — Implement the text translation service.
 - [x] S2-09 / AMTT-19 — Add `POST /api/translate` endpoint.
-- [x] S2-10 / AMTT-20 — Connect typed-text UI to translation API.
+- [x] S2-10 / AMTT-20 — Connect the typed-text UI to the translation API.
 
 Sprint 2 release checkpoint: `v0.2-text-translation`.
 
 ### Sprint 3 — Speech input and translated speech output
 
-- [ ] S3-01 / AMTT-21 — Verify Windows-compatible English/Hindi TTS options.
+- [x] S3-01 / AMTT-21 — Verify Windows-compatible English/Hindi TTS options. See [TTS model selection](docs/tts-model-selection.md).
 - [ ] S3-02 / AMTT-22 — Implement TTS provider adapter.
 - [ ] S3-03 / AMTT-23 — Add safe audio input validation and utilities.
 - [ ] S3-04 / AMTT-24 — Add `POST /api/speech-to-text` endpoint.
