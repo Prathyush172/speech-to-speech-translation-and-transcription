@@ -16,6 +16,7 @@ from app.providers.fake import (
     FakeTTSProvider,
 )
 from app.providers.faster_whisper_stt import FasterWhisperSTTProvider
+from app.providers.indictrans2_translation import IndicTrans2TranslationProvider
 from app.providers.stt import STTProvider
 from app.providers.translation import TranslationProvider
 from app.services.translation_service import TranslationServiceError
@@ -60,7 +61,15 @@ def create_app(
             compute_type=app_settings.stt_compute_type,
             cache_dir=app_settings.model_cache_dir,
         )
-        application.state.translation_provider = translation_provider
+        application.state.translation_provider = (
+            translation_provider
+            or IndicTrans2TranslationProvider(
+                en_hi_model_id=app_settings.translation_en_hi_model_id,
+                hi_en_model_id=app_settings.translation_hi_en_model_id,
+                device=app_settings.device,
+                cache_dir=app_settings.model_cache_dir,
+            )
+        )
         application.state.tts_provider = None
 
     @application.exception_handler(TranslationServiceError)

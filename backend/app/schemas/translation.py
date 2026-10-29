@@ -6,6 +6,11 @@ from pydantic import BaseModel, ConfigDict, Field, StringConstraints, model_vali
 
 TranslationDirection = Literal["en-to-hi", "hi-to-en"]
 LanguageCode = Literal["en", "hi"]
+
+LANGUAGES_BY_DIRECTION: dict[TranslationDirection, tuple[LanguageCode, LanguageCode]] = {
+    "en-to-hi": ("en", "hi"),
+    "hi-to-en": ("hi", "en"),
+}
 ProcessingStatus = Literal["success"]
 ErrorStage = Literal["validation", "stt", "translation", "tts", "unknown"]
 
@@ -58,10 +63,7 @@ class TranslationResponse(BaseModel):
     @model_validator(mode="after")
     def validate_languages_match_direction(self) -> "TranslationResponse":
         """Ensure language metadata agrees with the selected direction."""
-        expected_languages = {
-            "en-to-hi": ("en", "hi"),
-            "hi-to-en": ("hi", "en"),
-        }[self.direction]
+        expected_languages = LANGUAGES_BY_DIRECTION[self.direction]
         if (self.source_language, self.target_language) != expected_languages:
             raise ValueError("source and target languages must match direction")
         if (
@@ -96,6 +98,7 @@ class ErrorResponse(BaseModel):
 __all__ = [
     "ErrorResponse",
     "ErrorStage",
+    "LANGUAGES_BY_DIRECTION",
     "LanguageCode",
     "ProcessingStatus",
     "TranslationDirection",

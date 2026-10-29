@@ -6,6 +6,7 @@ from app.core.config import Settings
 from app.main import create_app
 from app.providers.fake import FakeSTTProvider, FakeTTSProvider, FakeTranslationProvider
 from app.providers.faster_whisper_stt import FasterWhisperSTTProvider
+from app.providers.indictrans2_translation import IndicTrans2TranslationProvider
 from app.providers.stt import AudioInput
 
 
@@ -43,9 +44,9 @@ def test_mock_mode_is_configurable_and_installs_fake_providers() -> None:
     assert "real translation" not in response.text.lower()
 
 
-def test_real_mode_does_not_install_fake_providers() -> None:
+def test_real_mode_installs_real_adapters_without_fake_providers() -> None:
     app = create_app(Settings(_env_file=None, provider_mode="real"))
 
     assert isinstance(app.state.stt_provider, FasterWhisperSTTProvider)
-    assert app.state.translation_provider is None
+    assert isinstance(app.state.translation_provider, IndicTrans2TranslationProvider)
     assert app.state.tts_provider is None

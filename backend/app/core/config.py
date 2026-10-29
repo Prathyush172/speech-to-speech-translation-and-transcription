@@ -29,10 +29,10 @@ class Settings(BaseSettings):
 
     stt_model_id: str = Field(default="Systran/faster-whisper-small", min_length=1)
     translation_en_hi_model_id: str = Field(
-        default="Helsinki-NLP/opus-mt-en-hi", min_length=1
+        default="ai4bharat/indictrans2-en-indic-dist-200M", min_length=1
     )
     translation_hi_en_model_id: str = Field(
-        default="Helsinki-NLP/opus-mt-hi-en", min_length=1
+        default="ai4bharat/indictrans2-indic-en-dist-200M", min_length=1
     )
     tts_en_model_id: str = Field(default="local/tts-en", min_length=1)
     tts_hi_model_id: str = Field(default="local/tts-hi", min_length=1)
