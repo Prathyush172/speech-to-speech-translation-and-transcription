@@ -8,18 +8,10 @@ from app.providers.translation import (
     TranslationResult,
 )
 from app.schemas.translation import (
-    LanguageCode,
-    TranslationDirection,
+    LANGUAGES_BY_DIRECTION,
     TranslationRequest,
     TranslationResponse,
 )
-
-LANGUAGES_BY_DIRECTION: dict[
-    TranslationDirection, tuple[LanguageCode, LanguageCode]
-] = {
-    "en-to-hi": ("en", "hi"),
-    "hi-to-en": ("hi", "en"),
-}
 
 
 class TranslationServiceError(Exception):

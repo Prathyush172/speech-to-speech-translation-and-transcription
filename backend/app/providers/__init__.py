@@ -7,6 +7,7 @@ from app.providers.stt import (
     STTProviderError,
     STTResult,
 )
+from app.providers.indictrans2_translation import IndicTrans2TranslationProvider
 from app.providers.translation import (
     TranslationProvider,
     TranslationProviderError,
@@ -22,6 +23,7 @@ from app.providers.tts import (
 __all__ = [
     "AudioInput",
     "FasterWhisperSTTProvider",
+    "IndicTrans2TranslationProvider",
     "ManagedAudioArtifact",
     "STTProvider",
     "STTProviderError",
