@@ -135,7 +135,7 @@ can pull and run the skeleton.
 - [x] S2-01 / AMTT-11 — Define request and response schemas.
 - [x] S2-02 / AMTT-12 — Define STT, translation, and TTS provider interfaces.
 - [x] S2-03 / AMTT-13 — Implement fake providers for development.
-- [ ] S2-04 / AMTT-14 — Verify and document Windows-compatible STT model.
+- [x] S2-04 / AMTT-14 — Verify and document Windows-compatible STT model. See the [STT model selection notes](docs/stt-model-selection.md).
 - [ ] S2-05 / AMTT-15 — Implement faster-whisper STT adapter.
 - [ ] S2-06 / AMTT-16 — Verify and document English↔Hindi translation model.
 - [ ] S2-07 / AMTT-17 — Implement translation provider adapter.
