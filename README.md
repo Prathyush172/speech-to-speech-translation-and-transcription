@@ -138,12 +138,12 @@ can pull and run the skeleton.
 - [x] S2-04 / AMTT-14 — Verify and document Windows-compatible STT model.
 - [x] S2-05 / AMTT-15 — Implement faster-whisper STT adapter.
 - [x] S2-04 / AMTT-14 — Verify and document Windows-compatible STT model. See the [STT model selection notes](docs/stt-model-selection.md).
-- [ ] S2-05 / AMTT-15 — Implement faster-whisper STT adapter.
-- [ ] S2-06 / AMTT-16 — Verify and document English↔Hindi translation model. See the [translation model selection notes](docs/translation-model-selection.md).
-- [ ] S2-07 / AMTT-17 — Implement translation provider adapter.
-- [ ] S2-08 / AMTT-18 — Implement text translation service.
-- [ ] S2-09 / AMTT-19 — Add `POST /api/translate` endpoint.
-- [ ] S2-10 / AMTT-20 — Connect typed-text UI to translation API.
+- [x] S2-05 / AMTT-15 — Implement faster-whisper STT adapter.
+- [x] S2-06 / AMTT-16 — Verify and document English↔Hindi translation model. See the [translation model selection notes](docs/translation-model-selection.md).
+- [x] S2-07 / AMTT-17 — Implement translation provider adapter.
+- [x] S2-08 / AMTT-18 — Implement text translation service.
+- [x] S2-09 / AMTT-19 — Add `POST /api/translate` endpoint.
+- [x] S2-10 / AMTT-20 — Connect typed-text UI to translation API.
 
 Sprint 2 release checkpoint: `v0.2-text-translation`.
 
