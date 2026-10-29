@@ -95,9 +95,12 @@ plain translated text or a typed `TranslationResult` containing source/target
 language metadata. Direction-to-language mapping is centralized in configuration
 or a small policy type rather than in route handlers.
 
-The real implementation may use a verified English ↔ Hindi model. Tests use a
-deterministic fake provider. The provider boundary prevents route and service
-code from depending on a model package or model identifier.
+The real implementation may use a verified English ↔ Hindi model. Development
+and tests use `FakeTranslationProvider`, which returns visibly prefixed mock
+output and must not be described as real translation. The provider boundary
+prevents route and service code from depending on a model package or model
+identifier. `PROVIDER_MODE=mock` also installs fake STT and TTS providers with
+no network or model-download side effects; `PROVIDER_MODE=real` disables them.
 
 #### Text-to-speech
 

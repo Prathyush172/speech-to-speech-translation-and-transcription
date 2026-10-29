@@ -10,6 +10,11 @@ from fastapi.responses import JSONResponse
 from app.api.routes import router
 from app.core.config import Settings, get_settings
 from app.core.logging_config import configure_logging
+from app.providers.fake import (
+    FakeSTTProvider,
+    FakeTranslationProvider,
+    FakeTTSProvider,
+)
 from app.providers.translation import TranslationProvider
 from app.services.translation_service import TranslationServiceError
 
@@ -39,7 +44,16 @@ def create_app(
         version="0.1.0",
         lifespan=lifespan,
     )
-    application.state.translation_provider = translation_provider
+    if app_settings.provider_mode == "mock":
+        application.state.stt_provider = FakeSTTProvider()
+        application.state.translation_provider = (
+            translation_provider or FakeTranslationProvider()
+        )
+        application.state.tts_provider = FakeTTSProvider()
+    else:
+        application.state.stt_provider = None
+        application.state.translation_provider = translation_provider
+        application.state.tts_provider = None
 
     @application.exception_handler(TranslationServiceError)
     async def handle_translation_error(

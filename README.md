@@ -70,7 +70,11 @@ python -m uvicorn app.main:app --app-dir backend --host 127.0.0.1 --port 8000
 
 Interactive API documentation is available at `http://127.0.0.1:8000/docs`.
 Application startup initializes only configuration and logging; speech models
-are not loaded or downloaded.
+are not loaded or downloaded. The default `PROVIDER_MODE=mock` installs clearly
+marked deterministic fake providers for UI and API development. Fake output is
+not a real transcription or translation and requires no network or model
+download. Set `PROVIDER_MODE=real` to disable fake providers when real adapters
+are configured.
 The `GET /api/health` endpoint returns `{"status": "ok"}`. Run its API tests
 from the repository root with `python -m pytest`.
 
@@ -130,7 +134,7 @@ can pull and run the skeleton.
 
 - [x] S2-01 / AMTT-11 — Define request and response schemas.
 - [x] S2-02 / AMTT-12 — Define STT, translation, and TTS provider interfaces.
-- [ ] S2-03 / AMTT-13 — Implement fake providers for development.
+- [x] S2-03 / AMTT-13 — Implement fake providers for development.
 - [ ] S2-04 / AMTT-14 — Verify and document Windows-compatible STT model.
 - [ ] S2-05 / AMTT-15 — Implement faster-whisper STT adapter.
 - [ ] S2-06 / AMTT-16 — Verify and document English↔Hindi translation model.
