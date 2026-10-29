@@ -2,7 +2,11 @@
 
 from starlette.concurrency import run_in_threadpool
 
-from app.providers.translation import TranslationProvider, TranslationProviderError
+from app.providers.translation import (
+    TranslationProvider,
+    TranslationProviderError,
+    TranslationResult,
+)
 from app.schemas.translation import (
     LanguageCode,
     TranslationDirection,
@@ -54,6 +58,9 @@ async def translate_text(
         )
     except TranslationProviderError as error:
         raise TranslationFailed from error
+
+    if isinstance(translated_text, TranslationResult):
+        translated_text = translated_text.translated_text
 
     if not isinstance(translated_text, str) or not translated_text.strip():
         raise TranslationFailed
