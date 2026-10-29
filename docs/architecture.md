@@ -87,7 +87,8 @@ unsupported language, and inference failures are represented as provider excepti
 A real implementation can use the lazy `FasterWhisperSTTProvider`, which loads
 optional ML dependencies only when inference begins. Development and default
 automated tests use a fake implementation that has no network or model download
-side effects.
+side effects. The selected Windows candidate and isolated loading requirements are
+recorded in [STT model selection](stt-model-selection.md).
 
 #### Translation
 
