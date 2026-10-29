@@ -15,6 +15,8 @@ from app.providers.fake import (
     FakeTranslationProvider,
     FakeTTSProvider,
 )
+from app.providers.faster_whisper_stt import FasterWhisperSTTProvider
+from app.providers.stt import STTProvider
 from app.providers.translation import TranslationProvider
 from app.services.translation_service import TranslationServiceError
 
@@ -24,6 +26,7 @@ logger = logging.getLogger(__name__)
 def create_app(
     settings: Settings | None = None,
     translation_provider: TranslationProvider | None = None,
+    stt_provider: STTProvider | None = None,
 ) -> FastAPI:
     """Create the API application without loading any speech models."""
     app_settings = settings or get_settings()
@@ -51,7 +54,12 @@ def create_app(
         )
         application.state.tts_provider = FakeTTSProvider()
     else:
-        application.state.stt_provider = None
+        application.state.stt_provider = stt_provider or FasterWhisperSTTProvider(
+            model_id=app_settings.stt_model_id,
+            device=app_settings.device,
+            compute_type=app_settings.stt_compute_type,
+            cache_dir=app_settings.model_cache_dir,
+        )
         application.state.translation_provider = translation_provider
         application.state.tts_provider = None
 

@@ -84,7 +84,8 @@ with transcript, detected or requested language metadata, confidence, and option
 metadata. It is responsible only for transcription. Invalid audio, empty input,
 unsupported language, and inference failures are represented as provider exceptions.
 
-The real implementation may use a local speech model. Development and default
+A real implementation can use the lazy `FasterWhisperSTTProvider`, which loads
+optional ML dependencies only when inference begins. Development and default
 automated tests use a fake implementation that has no network or model download
 side effects. The selected Windows candidate and isolated loading requirements are
 recorded in [STT model selection](stt-model-selection.md).

@@ -3,5 +3,4 @@
 # These packages are intentionally excluded from requirements.txt and
 # requirements-dev.txt so normal setup and tests do not download models.
 
-# Selected for the first faster-whisper Windows smoke test (AMTT-14/AMTT-15).
 faster-whisper>=1.1.0,<2
