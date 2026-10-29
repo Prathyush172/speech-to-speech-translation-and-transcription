@@ -65,14 +65,24 @@ selected direction.
 Empty/whitespace-only text and unsupported directions return HTTP 422
 with FastAPI field-validation details. If no translation provider is
 configured, the endpoint returns HTTP 503. A configured provider failure
-returns HTTP 502. These provider errors use the stable `ErrorResponse`
-shape with a safe message and the `translation` stage.
+returns HTTP 502. A missing provider returns HTTP 503 instead of a fake
+translation. These provider errors use the stable `ErrorResponse` shape
+with a safe message and the `translation` stage.
 
 ```json
 {
   "status": "error",
   "code": "translation_failed",
   "message": "Translation could not be completed.",
+  "stage": "translation"
+}
+```
+
+```json
+{
+  "status": "error",
+  "code": "translation_provider_unavailable",
+  "message": "Translation is not available because no provider is configured.",
   "stage": "translation"
 }
 ```
