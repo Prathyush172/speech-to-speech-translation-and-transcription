@@ -118,6 +118,25 @@ def test_translate_endpoint_rejects_unsupported_direction() -> None:
     assert response.json()["detail"][0]["loc"] == ["body", "direction"]
 
 
+def test_translate_endpoint_reports_unconfigured_provider_safely() -> None:
+    app = create_app(Settings(_env_file=None))
+    app.state.translation_provider = None
+
+    with TestClient(app) as client:
+        response = client.post(
+            "/api/translate",
+            json={"direction": "en-to-hi", "source_text": "Hello"},
+        )
+
+    assert response.status_code == 503
+    assert response.json() == {
+        "status": "error",
+        "code": "translation_provider_unavailable",
+        "message": "Translation is not available because no provider is configured.",
+        "stage": "translation",
+    }
+
+
 def test_translate_endpoint_reports_real_provider_load_failure_safely() -> None:
     app = create_app(Settings(_env_file=None, provider_mode="real"))
 
