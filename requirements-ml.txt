@@ -1,5 +1,6 @@
 # Optional heavy model dependencies.
-# Install only on the target environment after the corresponding model adapter
-# and its official Windows compatibility/licensing checks are completed.
+# Install only on the target environment when a real model adapter is enabled.
 # These packages are intentionally excluded from requirements.txt and
 # requirements-dev.txt so normal setup and tests do not download models.
+
+faster-whisper>=1.1.0,<2

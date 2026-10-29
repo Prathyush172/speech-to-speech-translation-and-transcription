@@ -1,5 +1,6 @@
 """Model provider interfaces and controlled provider failures."""
 
+from app.providers.faster_whisper_stt import FasterWhisperSTTProvider
 from app.providers.stt import (
     AudioInput,
     STTProvider,
@@ -20,6 +21,7 @@ from app.providers.tts import (
 
 __all__ = [
     "AudioInput",
+    "FasterWhisperSTTProvider",
     "ManagedAudioArtifact",
     "STTProvider",
     "STTProviderError",
