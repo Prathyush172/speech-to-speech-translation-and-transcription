@@ -119,7 +119,7 @@ def test_translate_endpoint_rejects_unsupported_direction() -> None:
 
 
 def test_translate_endpoint_reports_unconfigured_provider_safely() -> None:
-    app = create_app(Settings(_env_file=None))
+    app = create_app(Settings(_env_file=None, provider_mode="real"))
 
     with TestClient(app) as client:
         response = client.post(

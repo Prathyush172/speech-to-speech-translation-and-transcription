@@ -10,6 +10,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 LogLevel = Literal["CRITICAL", "ERROR", "WARNING", "INFO", "DEBUG"]
 Device = Literal["auto", "cpu", "cuda"]
+ProviderMode = Literal["mock", "real"]
 
 
 class Settings(BaseSettings):
@@ -37,6 +38,10 @@ class Settings(BaseSettings):
     model_cache_dir: Path = Path("models")
     device: Device = "auto"
     max_upload_size_bytes: int = Field(default=25 * 1024 * 1024, gt=0)
+    provider_mode: ProviderMode = Field(
+        default="mock",
+        description="Development mode; real provider adapters are not loaded in mock mode.",
+    )
 
     @field_validator("log_level", mode="before")
     @classmethod
